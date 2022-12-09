@@ -32,8 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void _changeIndex(int index) {
     setState(() {
       _currentIndex = index;
-      _pageController.animateToPage(index,
-          duration: const Duration(milliseconds: 500), curve: Curves.ease);
+      _pageController.jumpToPage(_currentIndex);
     });
   }
 
@@ -46,7 +45,6 @@ class _MyHomePageState extends State<MyHomePage> {
           physics: NeverScrollableScrollPhysics(),
           controller: _pageController,
           scrollDirection: Axis.horizontal,
-          allowImplicitScrolling: false,
           onPageChanged: (int index) {
             _changeIndex(index);
           },
