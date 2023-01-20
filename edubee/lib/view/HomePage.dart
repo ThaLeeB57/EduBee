@@ -69,7 +69,6 @@ class _MyHomePageState extends State<MyHomePage> {
         currentIndex: _currentIndex,
         selectedItemColor: Colors.amber[800],
         onTap: (int index) {
-          print(index);
           _changeIndex(index);
         },
       ),
