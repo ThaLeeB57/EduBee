@@ -247,7 +247,7 @@ class Plants {
   final String image;
   final LatLng location;
   final String description;
-  bool isFound = true;
+  bool isFound = false;
 
   Plants({
     required this.name,

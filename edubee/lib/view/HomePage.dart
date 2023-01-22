@@ -55,15 +55,15 @@ class _MyHomePageState extends State<MyHomePage> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.map_outlined),
-            label: 'Map',
+            label: 'Carte',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.qr_code_scanner_outlined),
-            label: 'Scan',
+            label: 'QR Code',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.list_alt),
-            label: 'Ranking',
+            label: 'Collection',
           ),
         ],
         currentIndex: _currentIndex,

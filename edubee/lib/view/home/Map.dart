@@ -15,7 +15,7 @@ class _MapPageState extends State<MapPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("MAP"),
+        title: const Center(child: Text("Carte")),
       ),
       body: Map(),
     );
@@ -87,6 +87,7 @@ class FlowerMarker extends Marker {
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               Image.asset(flower.image),
+                              const SizedBox(height: 10),
                               Text(flower.description)
                             ],
                           )),

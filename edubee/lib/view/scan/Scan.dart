@@ -23,7 +23,7 @@ class _ScanState extends State<Scan> {
   void reassemble() {
     super.reassemble();
     if (Platform.isAndroid) {
-      // controller!.pauseCamera();
+      controller!.resumeCamera();
     } else if (Platform.isIOS) {
       controller!.resumeCamera();
     }
