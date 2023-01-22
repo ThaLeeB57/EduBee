@@ -32,11 +32,11 @@ class _ScanState extends State<Scan> {
   @override
   Widget build(BuildContext context) {
     if (result != null) {
-      getPlant(result!.code)!.isFound = true;
-      print("------------------");
-      print(getPlant(result!.code));
-      print("------------------");
-      result = null;
+      dynamic plant = getPlant(result!.code);
+      if (plant != null) {
+        plant.isFound = true;
+        result = null;
+      }
     }
     return Scaffold(
       body: Column(

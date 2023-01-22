@@ -41,10 +41,10 @@ class Map extends StatelessWidget {
               flower: getPlant("Érable champêtre"),
             ),
             FlowerMarker(
-              flower: getPlant("Vinca mino"),
+              flower: getPlant("Callune"),
             ),
             FlowerMarker(
-              flower: getPlant("Prunus avium"),
+              flower: getPlant("Févier d'Amérique"),
             ),
           ],
         )
