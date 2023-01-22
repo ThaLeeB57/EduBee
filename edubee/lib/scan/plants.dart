@@ -65,10 +65,10 @@ final plantsObject = [
     location: LatLng(48.660717, 6.155612),
   ),
   Plants(
-    name: "Dalhlia variabilis",
+    name: "Dalhia variabilis",
     description:
         "Vivace par ses racines, la plante a une végétation annuelle. Hauteur de 30 cm à 3 m et plus, selon les espèces",
-    image: "assets/Dalhlia variabilis.jpg",
+    image: "assets/Dalhia variabilis.jpg",
     location: LatLng(48.661717, 6.155612),
   ),
   Plants(
@@ -138,7 +138,7 @@ final plantsObject = [
     name: "Merisier",
     description:
         "Le merisier ou cerisier des oiseaux est un arbre originaire d'Europe, d'Asie de l'ouest et d'Afrique du nord appartenant au genre Prunus de la famille des Rosaceae. Il est parfois appelé cerisier sauvage ou cerisier des bois.",
-    image: "assets/Prunus avium.jpg",
+    image: "assets/Prunus avium.jpeg",
     location: LatLng(48.661717, 6.156612),
   ),
   Plants(
@@ -238,12 +238,16 @@ dynamic getPlant(String? name) => isPlant(name)
     ? plantsObject.firstWhere((element) => element.name == name)
     : null;
 
+List<Plants> plantsFind() {
+  return plantsObject.where((element) => element.isFound).toList();
+}
+
 class Plants {
   final String name;
   final String image;
   final LatLng location;
   final String description;
-  bool isFound = false;
+  bool isFound = true;
 
   Plants({
     required this.name,

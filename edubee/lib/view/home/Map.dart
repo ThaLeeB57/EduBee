@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 
-class Home extends StatefulWidget {
-  const Home({super.key});
+class MapPage extends StatefulWidget {
+  const MapPage({super.key});
 
   @override
-  State<Home> createState() => _HomeState();
+  State<MapPage> createState() => _MapPageState();
 }
 
-class _HomeState extends State<Home> {
+class _MapPageState extends State<MapPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

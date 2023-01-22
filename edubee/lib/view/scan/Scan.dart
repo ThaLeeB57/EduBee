@@ -5,7 +5,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 
-import '../home/Home.dart';
+import '../home/Map.dart';
 
 class Scan extends StatefulWidget {
   const Scan({super.key});
@@ -41,30 +41,28 @@ class _ScanState extends State<Scan> {
     return Scaffold(
       body: Column(
         children: <Widget>[
-          Positioned(
-            child: Container(
-              color: Colors.black,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  IconButton(
-                    icon: const Icon(Icons.flash_on),
-                    color: Colors.white,
-                    onPressed: () async {
-                      await controller!.toggleFlash();
-                      setState(() {});
-                    },
-                  ),
-                  IconButton(
-                    icon: const Icon(Icons.camera_alt),
-                    color: Colors.white,
-                    onPressed: () async {
-                      await controller!.flipCamera();
-                      setState(() {});
-                    },
-                  ),
-                ],
-              ),
+          Container(
+            color: Colors.black,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                IconButton(
+                  icon: const Icon(Icons.flash_on),
+                  color: Colors.white,
+                  onPressed: () async {
+                    await controller!.toggleFlash();
+                    setState(() {});
+                  },
+                ),
+                IconButton(
+                  icon: const Icon(Icons.camera_alt),
+                  color: Colors.white,
+                  onPressed: () async {
+                    await controller!.flipCamera();
+                    setState(() {});
+                  },
+                ),
+              ],
             ),
           ),
           Expanded(

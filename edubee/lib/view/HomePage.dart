@@ -1,6 +1,6 @@
-import 'package:edubee/view/home/Home.dart';
+import 'package:edubee/view/home/Map.dart';
 import 'package:edubee/view/scan/Scan.dart';
-import 'package:edubee/view/score/Score.dart';
+import 'package:edubee/view/score/Collection.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -48,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
           onPageChanged: (int index) {
             _changeIndex(index);
           },
-          children: const <Widget>[Home(), Scan(), Rank()],
+          children: const <Widget>[MapPage(), Scan(), Collection()],
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
