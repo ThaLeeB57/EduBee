@@ -80,7 +80,22 @@ class CardPlant extends StatelessWidget {
                           builder: (context) {
                             return AlertDialog(
                               title: Text(plant.name),
-                              content: Text(plant.description),
+                              content: ListView(
+                                shrinkWrap: true,
+                                children: [
+                                  Image.asset(plant.image),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text(plant.description),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text("Hauteur: ${plant.hauteur}m"),
+                                  Text("Couleur: ${plant.color}"),
+                                  Text("Floraison: ${plant.floraison}"),
+                                ],
+                              ),
                               actions: [
                                 TextButton(
                                     onPressed: () {

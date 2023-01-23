@@ -1,8 +1,10 @@
 import 'dart:io';
 
+import 'package:edubee/main.dart';
 import 'package:edubee/scan/plants.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 
 import '../home/Map.dart';
@@ -34,7 +36,12 @@ class _ScanState extends State<Scan> {
     if (result != null) {
       dynamic plant = getPlant(result!.code);
       if (plant != null) {
-        plant.isFound = true;
+        if (plant.isFound == false) {
+          plant.isFound = true;
+          // Provider.of<ScoreParty>(context, listen: false)
+          //     .changeScore(plant.nectar);
+          scoreParty.changeScore(plant.nectar);
+        }
         result = null;
       }
     }
